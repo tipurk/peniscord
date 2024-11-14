@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Мессенджер</title>
-    <script src="index.js" defer></script> <!-- defer для ожидания загрузки страницы -->
-</head>
-<body>
+    <script src="index.js" defer></script>
+    <!-- defer для ожидания загрузки страницы -->
+  </head>
+  <body>
     <div class="container">
-        <div class="chat-window">
-            <div class="header">
-                <div id="hand" class="hand"></div> <!-- Элемент для руки -->
-                <img src="C:/Users/Student/Desktop/peniscord/imges/cat-icon.jpg" alt="Avatar" class="avatar">
-                <h1 class="chat-title">peniscord</h1>
-            </div>
-            <hr class="divider">
-            <ul id="messages" class="messages-list"></ul>
-            <form id="message-form" class="message-form">
-                <input type="text" id="message-input" placeholder="Введите сообщение">
-                <button type="submit"><img src="C:/Users/Student/Desktop/peniscord/imges/msg-icon.png" alt="Отправить" class="msg-button"></button>
-                <div class="menu-container">
-                    <button id="menu-button">идинахуй</button>
-                    <div id="menu" class="menu">
-                        <button id="pet-button">Погладить кота</button>
-                    </div>
-                </div>
-                
-            </form>
+      <div class="chat-window">
+        <div class="header">
+          <div id="hand" class="hand"></div>
+          <!-- Элемент для руки -->
+          <img src="/imges/cat-icon.jpg" alt="Avatar" class="avatar" />
+          <h1 class="chat-title">peniscord</h1>
         </div>
+        <hr class="divider" />
+        <ul id="messages" class="messages-list"></ul>
+        <form id="message-form" class="message-form">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Введите сообщение"
+          />
+          <button type="submit">
+            <img src="/imges/msg-icon.png" alt="Отправить" class="msg-button" />
+          </button>
+          <div class="menu-container">
+            <button id="menu-button">идинахуй</button>
+            <div id="menu" class="menu">
+              <button id="pet-button">Погладить кота</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
+  </body>
 </html>
