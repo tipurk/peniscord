@@ -1,0 +1,99 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightslategray;
+  margin: 0;
+  padding: 20px;
+  overflow-y: hidden;
+}
+
+.container {
+  margin: auto;
+}
+
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-item:hover {
+  border-radius: 5px;
+}
+
+.test-page {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+.test-page h1 {
+  color: #333;
+}
+
+.test-content {
+  margin-top: 20px;
+}
+
+.test-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.test-button:hover {
+  background-color: #0056b3;
+}
+
+.navbotbar {
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+/* Стили для кнопок */
+.navbotbar .nav-item {
+  color: #007bff;
+  text-align: center;
+  flex: 1;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif; /* Используем тот же шрифт, что и в основном стиле */
+}
+
+/* Стили для активной кнопки */
+.navbotbar .nav-item.active {
+  color: #003b79;
+}
+
+/* Эффект при наведении на кнопки */
+.navbotbar .nav-item:hover {
+  color: #003b79;
+}
+
+/* Кастомизация кнопок в навигационном баре */
+.navbotbar .nav-item:focus {
+  outline: none; /* Убираем стандартную рамку при фокусе */
+}

@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="style.css" />
     <title>Мессенджер</title>
     <script src="index.js" defer></script>
-    <!-- defer для ожидания загрузки страницы -->
+    <script src="views/navbotbar/script.js" defer></script>
   </head>
   <body>
     <div class="container">
       <div class="chat-window">
         <div class="header">
           <div id="hand" class="hand"></div>
-          <!-- Элемент для руки -->
           <img src="imges/cat-icon.jpg" alt="Avatar" class="avatar" />
           <h1 class="chat-title">peniscord</h1>
         </div>
@@ -41,6 +40,20 @@
             </div>
           </div>
         </form>
+      </div>
+
+      <!-- Нижний навигационный бар -->
+      <div class="navbotbar">
+        <div class="nav-item" onclick="selectNavItem(this)">
+          <a href="index.html"
+            ><img src="imges/chat-icon.png" alt="Chat" class="nav-bar-icon"
+          /></a>
+        </div>
+        <div class="nav-item" onclick="selectNavItem(this)">
+          <a href="views/test/index.html">Test</a>
+        </div>
+        <div class="nav-item" onclick="selectNavItem(this)">Notifications</div>
+        <div class="nav-item" onclick="selectNavItem(this)">Profile</div>
       </div>
     </div>
   </body>
