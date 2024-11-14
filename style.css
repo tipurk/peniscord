@@ -1,154 +1,155 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: lightslategray;
-    margin: 0;
-    padding: 20px;
-    overflow-y: hidden;
+  font-family: Arial, sans-serif;
+  background-color: lightslategray;
+  margin: 0;
+  padding: 20px;
+  overflow-y: hidden;
 }
 
 .container {
-    margin: auto;
+  margin: auto;
 }
 
 .menu-container {
-    position: relative;
+  position: relative;
 }
 
 #hand {
-    position: absolute;
-    display: none; /* Скрываем руку по умолчанию */
-    /* Добавьте другие стили для руки, например, размер и цвет */
+  position: absolute;
+  display: none; /* Скрываем руку по умолчанию */
+  /* Добавьте другие стили для руки, например, размер и цвет */
 }
 
 .menu {
-    display: none; /* Скрываем меню по умолчанию */
-    position: absolute; /* Позиционируем меню относительно кнопки */
-    bottom: 100%; /* Позиционируем меню над кнопкой */
-    right: 0; /* Выравниваем меню по левому краю кнопки */
-    background-color: white; /* Цвет фона меню */
-    border: 1px solid #ccc; /* Граница меню */
-    padding: 10px; /* Внутренние отступы */
-    z-index: 100; /* Устанавливаем порядок отображения */
-    margin-bottom: 5px; /* Отступ между кнопкой и меню */
+  display: none; /* Скрываем меню по умолчанию */
+  position: absolute; /* Позиционируем меню относительно кнопки */
+  bottom: 100%; /* Позиционируем меню над кнопкой */
+  right: 0; /* Выравниваем меню по левому краю кнопки */
+  background-color: white; /* Цвет фона меню */
+  border: 1px solid #ccc; /* Граница меню */
+  padding: 10px; /* Внутренние отступы */
+  z-index: 100; /* Устанавливаем порядок отображения */
+  margin-bottom: 5px; /* Отступ между кнопкой и меню */
 }
-
 
 .menu.active {
-    display: block; /* Показываем меню, когда у него есть класс active */
+  display: block; /* Показываем меню, когда у него есть класс active */
 }
 
-
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .divider {
-    border: none; /* Убираем стандартный стиль рамки */
-    height: 1px; /* Высота линии */
-    background-color: #ccc; /* Цвет линии */
-    margin-top: 20px;
+  border: none; /* Убираем стандартный стиль рамки */
+  height: 1px; /* Высота линии */
+  background-color: #ccc; /* Цвет линии */
+  margin-top: 20px;
 }
 
 .hand {
-    z-index: 2;
-    width: 50px; /* Ширина изображения руки */
-    height: 50px; /* Высота изображения руки */
-    background-image: url('imges/hand.png'); /* Путь к изображению руки */
-    background-size: contain; /* Масштабируем изображение */
-    display: none; /* Скрываем элемент до нажатия */
-    opacity: 1; /* Полная видимость в начале */
-    transition: opacity 1s ease-out; /* Плавный переход для исчезновения */
-    pointer-events: none; /* Игнорировать события мыши */
+  z-index: 2;
+  width: 50px; /* Ширина изображения руки */
+  height: 50px; /* Высота изображения руки */
+  background-image: url("imges/hand.png"); /* Путь к изображению руки */
+  background-size: contain; /* Масштабируем изображение */
+  display: none; /* Скрываем элемент до нажатия */
+  opacity: 1; /* Полная видимость в начале */
+  transition: opacity 1s ease-out; /* Плавный переход для исчезновения */
+  pointer-events: none; /* Игнорировать события мыши */
 }
 
 .avatar {
-    border-radius: 75%;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 10px;
+  border-radius: 75%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 10px;
+  background-image: url("/imges/cat-icon.jpg");
 }
 
 .chat-title {
-    margin: 0;
-    text-align: center;
-    font-size: 14px;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
 }
 
 .chat-window {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .messages-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    height: 80vh; /* Задаем высоту в 70% от высоты экрана */
-    overflow-y: auto;
-    border-bottom: 1px solid #ccc;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  height: 80vh; /* Задаем высоту в 70% от высоты экрана */
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;
 }
 
-.msg-button{
-    height: 25px;
-    width: 25px;
+.msg-button {
+  height: 25px;
+  width: 25px;
+  background-image: url("/imges/msg-icon.png");
 }
 
 .messages-list li {
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
 }
 
 .messages-list li:nth-child(odd) {
-    background-color: #e8f4fd;
+  background-color: #e8f4fd;
 }
 
 .message-form {
-    display: flex;
-    margin-top: 10px;
+  display: flex;
+  margin-top: 10px;
 }
 
 .message-form input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .message-form button {
-    padding: 10px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
 }
 
 .message-form button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 @keyframes squash {
-    0%, 100% {
-        transform: scaleY(2); /* Объект нормального размера */
-        transform: scaleX(0.5); /* Объект нормального размера */
-    }
-    50% {
-        transform: scaleY(0.5); /* Объект расплющен */
-        transform: scaleX(2); /* Объект нормального размера */
-    }
+  0%,
+  100% {
+    transform: scaleY(2); /* Объект нормального размера */
+    transform: scaleX(0.5); /* Объект нормального размера */
+  }
+  50% {
+    transform: scaleY(0.5); /* Объект расплющен */
+    transform: scaleX(2); /* Объект нормального размера */
+  }
 }
 
 .avatar.squashing {
-    animation: squash 1.5s;
+  animation: squash 1.5s;
 }
