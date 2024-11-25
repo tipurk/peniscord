@@ -1,4 +1,30 @@
-/* Основные стили для бокового меню */
+.chat-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.sidebar-toggle {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  background: #0056b3;
+}
+
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -11,11 +37,13 @@
   flex-direction: column;
   padding: 20px 10px;
   z-index: 100;
-  transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: none; /* Исчезающая обводка */
 }
 
 .sidebar-open {
   left: 0; /* Открытое состояние */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Плавное появление обводки */
 }
 
 .sidebar-close {
@@ -60,25 +88,6 @@
   width: 25px;
   height: 25px;
   margin-right: 10px;
-}
-
-/* Кнопка для открытия бокового меню */
-.sidebar-toggle {
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  z-index: 110;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.sidebar-toggle:hover {
-  background: #0056b3;
 }
 
 body {
@@ -171,7 +180,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 74vh; /* Задаем высоту в 70% от высоты экрана */
+  height: 70vh; /* Задаем высоту в 70% от высоты экрана */
   overflow-y: auto;
   border-bottom: 1px solid #ccc;
 }

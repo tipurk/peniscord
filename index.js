@@ -31,39 +31,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const sidebar = document.getElementById("sidebar");
-  const sidebarToggle = document.getElementById("sidebarToggle");
-  const sidebarClose = document.getElementById("sidebarClose");
 
-  function toggleSidebar() {
-    sidebar.classList.toggle("sidebar-open");
-  }
-
-  // Открытие/закрытие через кнопку
-  sidebarToggle.addEventListener("click", toggleSidebar);
-  sidebarClose.addEventListener("click", toggleSidebar);
-
-  // Добавление функциональности свайпа
   let startX = 0;
   let endX = 0;
 
+  // Начало свайпа
   document.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
   });
 
+  // Движение пальца
   document.addEventListener("touchmove", (e) => {
     endX = e.touches[0].clientX;
   });
 
+  // Завершение свайпа
   document.addEventListener("touchend", () => {
     const swipeDistance = endX - startX;
 
     // Свайп вправо (открыть меню)
-    if (swipeDistance > 50 && sidebar.style.left !== "0px") {
+    if (swipeDistance > 50 && !sidebar.classList.contains("sidebar-open")) {
       sidebar.classList.add("sidebar-open");
     }
 
     // Свайп влево (закрыть меню)
-    if (swipeDistance < -50 && sidebar.style.left === "0px") {
+    if (swipeDistance < -50 && sidebar.classList.contains("sidebar-open")) {
       sidebar.classList.remove("sidebar-open");
     }
 
