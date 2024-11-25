@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Тестовая страница</title>
+    <script src="../../index.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -15,21 +16,24 @@
         <p>Хуй</p>
         <button class="test-button">Нажми меня</button>
       </div>
-      <!-- Нижний навигационный бар -->
-      <div class="navbotbar">
-        <div class="nav-item" onclick="selectNavItem(this)">
-          <a href="../../index.html"
-            ><img
-              src="../../imges/chat-icon.png"
-              alt="Chat"
-              class="nav-bar-icon"
-          /></a>
-        </div>
-        <div class="nav-item" onclick="selectNavItem(this)">
-          <a href="/index.html">Test</a>
-        </div>
-        <div class="nav-item" onclick="selectNavItem(this)">Notifications</div>
-        <div class="nav-item" onclick="selectNavItem(this)">Profile</div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-item">
+        <a href="index.html" onclick="selectNavItem(this)">
+          <img src="imges/chat-icon.png" alt="Chat" class="sidebar-icon" />
+          <span>Chat</span>
+        </a>
+      </div>
+      <div class="sidebar-item">
+        <a href="views/test/index.html" onclick="selectNavItem(this)">
+          <span>Test</span>
+        </a>
+      </div>
+      <div class="sidebar-item" onclick="selectNavItem(this)">
+        <span>Notifications</span>
+      </div>
+      <div class="sidebar-item" onclick="selectNavItem(this)">
+        <span>Profile</span>
       </div>
     </div>
   </body>
