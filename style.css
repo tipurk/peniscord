@@ -124,7 +124,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 70vh; /* Задаем высоту в 70% от высоты экрана */
+  height: 65vh; /* Задаем высоту в 70% от высоты экрана */
   overflow-y: auto;
   border-bottom: 1px solid #ccc;
 }
