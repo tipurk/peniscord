@@ -30,6 +30,48 @@ document.addEventListener("DOMContentLoaded", function () {
     messagesList.scrollTop = messagesList.scrollHeight;
   }
 
+  const sidebar = document.getElementById("sidebar");
+  const sidebarToggle = document.getElementById("sidebarToggle");
+  const sidebarClose = document.getElementById("sidebarClose");
+
+  function toggleSidebar() {
+    sidebar.classList.toggle("sidebar-open");
+  }
+
+  // Открытие/закрытие через кнопку
+  sidebarToggle.addEventListener("click", toggleSidebar);
+  sidebarClose.addEventListener("click", toggleSidebar);
+
+  // Добавление функциональности свайпа
+  let startX = 0;
+  let endX = 0;
+
+  document.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  document.addEventListener("touchmove", (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  document.addEventListener("touchend", () => {
+    const swipeDistance = endX - startX;
+
+    // Свайп вправо (открыть меню)
+    if (swipeDistance > 50 && sidebar.style.left !== "0px") {
+      sidebar.classList.add("sidebar-open");
+    }
+
+    // Свайп влево (закрыть меню)
+    if (swipeDistance < -50 && sidebar.style.left === "0px") {
+      sidebar.classList.remove("sidebar-open");
+    }
+
+    // Сброс значений
+    startX = 0;
+    endX = 0;
+  });
+
   // Анимация руки
   function animateHand() {
     hand.style.display = "flex";

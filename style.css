@@ -1,41 +1,86 @@
-.navbotbar {
-  bottom: 0;
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  z-index: 100;
+/* Основные стили для бокового меню */
+.sidebar {
   position: fixed;
-  right: 0;
-  height: 45px;
+  top: 0;
+  left: -250px; /* Начальное положение за экраном */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  z-index: 100;
+  transition: left 0.3s ease-in-out;
 }
 
-/* Стили для кнопок */
-.navbotbar .nav-item {
+.sidebar-open {
+  left: 0; /* Открытое состояние */
+}
+
+.sidebar-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.sidebar-item {
   color: #007bff;
-  text-align: center;
-  flex: 1;
+  text-align: left;
   font-size: 16px;
   cursor: pointer;
-  transition: color 0.3s ease;
-  font-family: Arial, sans-serif; /* Используем тот же шрифт, что и в основном стиле */
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-/* Стили для активной кнопки */
-.navbotbar .nav-item.active {
+.sidebar-item a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-item:hover {
+  background-color: #f0f0f0;
   color: #003b79;
 }
 
-/* Эффект при наведении на кнопки */
-.navbotbar .nav-item:hover {
+.sidebar-item.active {
+  background-color: #e0e0e0;
   color: #003b79;
 }
 
-/* Кастомизация кнопок в навигационном баре */
-.navbotbar .nav-item:focus {
-  outline: none; /* Убираем стандартную рамку при фокусе */
+.sidebar-icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 }
+
+/* Кнопка для открытия бокового меню */
+.sidebar-toggle {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 110;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  background: #0056b3;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -126,7 +171,7 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 60vh; /* Задаем высоту в 70% от высоты экрана */
+  height: 74vh; /* Задаем высоту в 70% от высоты экрана */
   overflow-y: auto;
   border-bottom: 1px solid #ccc;
 }
